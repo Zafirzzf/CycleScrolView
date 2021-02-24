@@ -31,7 +31,7 @@ Then - seutp ScrollView
 
 ```
 let scrollView = CycleScrollView<SimpleLabelCell>(frame: .zero,
-                                                          options: .init(pageAnimateInterval: 3.0, startAutoScroll: true))
+                                                  options: .init(pageAnimateInterval: 3.0, startAutoScroll: true))
 scrollView.update(with: [SimpleModel(name: "name")])
 view.addSubview(scrollView)
 ```
