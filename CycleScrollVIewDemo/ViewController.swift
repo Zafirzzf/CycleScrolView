@@ -16,6 +16,16 @@ class ViewController: UIViewController {
                                                           options: .init(pageAnimateInterval: 3.0, startAutoScroll: true))
         scrollView.update(with: [SimpleModel(name: "name")])
         view.addSubview(scrollView)
+        
+        scrollView.itemDidShow = { view, index, model in
+            // cell did display callback
+        }
+        
+        scrollView.itemDidSelect = { view, index, model in
+            // cell did click callback
+        }
+        
+        scrollView.scrollTo(index: 3)
     }
 }
 
@@ -27,7 +37,7 @@ class SimpleLabelCell: UICollectionViewCell, CycleScrollViewCell {
         
     typealias ItemModel = SimpleModel
     
-    func update(with model: ItemModel) {
+    func update(with model: SimpleModel) {
         // update UI
     }
 }
